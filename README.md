@@ -5,6 +5,7 @@ Sınava hazırlanmak ve öğrendiklerimi paylaşmak için geliştirmeye başlad�
 ## Faydalı Bağlantılar
 [Başvuru, Sınav Süreç Rehberi](https://ugurarici.com/2019/06/01/amator-telsizcilik-basvuru-sinav-surec-rehberi/)
 [Soru Bankası](http://www.kiyiemniyeti.gov.tr/userfiles/file/AmatorTelsiz/sorubankasi.rar)
+[Soru Bankası - Yedek](https://amatortelsizcilik.com/storage/files/sorubankasi.rar)
 
 ## Youtube Kanalları
 [Gürel Özbakış](https://www.youtube.com/channel/UCwJ_TQTyNo0dk3q2yDyhS3w)
