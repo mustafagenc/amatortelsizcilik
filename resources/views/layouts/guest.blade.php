@@ -7,16 +7,21 @@
         <title>{{ setting('site.title') }}</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        @yield('favicon', View::make('partials.favicon'))
         @livewireStyles
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.js" defer></script>
+        <script src="https://kit.fontawesome.com/95ecd7c087.js" crossorigin="anonymous"></script>
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
+            @livewire('navigation-dropdown')
+            @isset($header)
             <header class="bg-white shadow">
                 <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                     {{ $header }}
                 </div>
             </header>
+            @endisset
             <main>
                 {{ $slot }}
             </main>
