@@ -11,6 +11,7 @@ class ExamQuestion extends Model
     protected $fillable = [
         'is_active',
         'question',
+        'info_link',
         'category_id',
         'class_id',
         'answer_1_true',
@@ -22,5 +23,10 @@ class ExamQuestion extends Model
         'answer_4_true',
         'answer_4',
     ];
+
+    public function category()
+    {
+        return $this->hasOne(ExamCategory::class, 'id', 'category_id');
+    }
 
 }

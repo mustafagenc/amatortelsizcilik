@@ -37266,6 +37266,10 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip();
+});
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
