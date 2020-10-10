@@ -15,7 +15,8 @@
         "laravel/framework": "^8.0",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^3.0",
-        "tcg/voyager": "^1.4"
+        "tcg/voyager": "^1.4",
+        "laravelium/sitemap": "8.*"
     },
     "require-dev": {
         "facade/ignition": "^2.3.6",
