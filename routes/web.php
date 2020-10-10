@@ -35,15 +35,9 @@ Route::get('/sitemap', function() {
 });
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
 Route::get('questions/{category_id}', [App\Http\Controllers\QuestionController::class, 'index'])->name('questions');
+Route::get('{slug}', [App\Http\Controllers\PageController::class, 'index'])->name('page');
 
-Route::get('{slug}', function($slug){
-    $page = Cache::remember('page_' . $slug, 60, function () use($slug) {
-        return TCG\Voyager\Models\Page::where('slug', '=', $slug)->firstOrFail();
-    });
-	return view('page', compact('page'));
-})->name('page');
 
 // Route::prefix('exam')->group(function () {
 
