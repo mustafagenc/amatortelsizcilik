@@ -13,14 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name('home');
+Auth::routes();
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+// Route::prefix('exam')->group(function () {
+
+//     Route::get('/', function () {
+//         return view('exam.index');
+//     })->name('exam');
+
+// });
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
