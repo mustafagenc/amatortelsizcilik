@@ -14,7 +14,7 @@
     @yield('analytics', View::make('partials.analytics'))
 </head>
 <body>
-    <div id="app">
+    <div id="app" class="pb-4">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
             @yield('navbar', View::make('partials.navbar'))
         </nav>
