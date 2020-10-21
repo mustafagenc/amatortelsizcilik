@@ -74,7 +74,7 @@ var disqus_config = function () {
 this.page.url = '{!! route('page', $page->slug) !!}';
 this.page.identifier = {!! $page->id !!};
 };
-(function() { // DON'T EDIT BELOW THIS LINE
+(function() {
 var d = document, s = d.createElement('script');
 s.src = 'https://amatortelsizcilik.disqus.com/embed.js';
 s.setAttribute('data-timestamp', +new Date());

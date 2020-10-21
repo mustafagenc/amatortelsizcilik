@@ -19,6 +19,7 @@
         "laravel/ui": "^3.0",
         "laravelium/sitemap": "8.*",
         "mtownsend/read-time": "^1.1",
+        "renatomarinho/laravel-page-speed": "^1.9",
         "sentry/sentry-laravel": "^2.1",
         "tcg/voyager": "^1.4"
     },

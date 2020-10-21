@@ -24,9 +24,9 @@
     <footer class="container my-3 footer">
         <div class="row">
             <div class="col-6 col-md">
-                <a href="{{ setting('site.social_github') }}" class="github" title="Github"><i class="fab fa-github fa-lg"></i></a>
-                <a href="{{ setting('site.social_facebook') }}" class="facebook" title="Facebook"><i class="fab fa-facebook fa-lg"></i></a>
-                <a href="{{ setting('site.social_pinterest') }}" class="pinterest" class="Pinterest"><i class="fab fa-pinterest fa-lg"></i></a>
+                <a href="{{ setting('site.social_github') }}" class="github" title="Github"><i class="fab fa-github fa-lg"></i></a>&nbsp;
+                <a href="{{ setting('site.social_facebook') }}" class="facebook" title="Facebook"><i class="fab fa-facebook fa-lg"></i></a>&nbsp;
+                <a href="{{ setting('site.social_pinterest') }}" class="pinterest" class="Pinterest"><i class="fab fa-pinterest fa-lg"></i></a>&nbsp;
                 <a href="{{ setting('site.social_instagram') }}" class="instagram" class="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
             </div>
             <div class="col-6 col-md text-right">
