@@ -1,12 +1,13 @@
 @extends('layouts.app')
 
+@section('breadcrumbs', Breadcrumbs::render())
+
 @section('content')
 <div class="container">
     <div class="row">
         <div class="col-sm d-flex">
             <div class="card flex-fill">
                 <div class="card-body">
-
 
 
                     <div class="row">

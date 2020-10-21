@@ -18,6 +18,7 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light shadow-sm">
         @yield('navbar', View::make('partials.navbar'))
     </nav>
+    @yield('breadcrumbs')
     <main class="main" class="container">
         @yield('content')
     </main>

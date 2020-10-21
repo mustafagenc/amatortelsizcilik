@@ -10919,7 +10919,7 @@ a.text-dark:focus {
 
 body {
   min-height: 50rem;
-  padding-top: 4.5rem;
+  padding-top: 4.2rem;
 }
 
 .navbar-brand {
@@ -10930,6 +10930,10 @@ body {
   margin-right: 20px;
   margin-left: 10px;
   text-indent: -9999px;
+}
+
+.breadcrumb {
+  font-size: 12px;
 }
 
 .jumbotron {

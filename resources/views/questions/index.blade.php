@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('breadcrumbs', Breadcrumbs::render())
+
 @section('content')
 <div class="container user-select-none">
     <div class="row">
