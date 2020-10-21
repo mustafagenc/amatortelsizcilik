@@ -3,8 +3,7 @@
 
 
 ## Amatör Telsizcilik
-Sınava hazırlanmak ve öğrendiklerimi paylaşmak için geliştirmeye başladığım projem.
-
+Sınava hazırlanmak ve öğrendiklerimi paylaşmak için geliştirmeye başladığım projem [Amatör Telsizcilik](https://amatortelsizcilik.com/).
 
 ## Faydalı Bağlantılar
 - [Başvuru, Sınav Süreç Rehberi][1]
