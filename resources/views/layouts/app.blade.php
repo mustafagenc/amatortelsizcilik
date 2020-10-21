@@ -24,9 +24,8 @@
     <footer class="container my-3">
         <div class="row">
             <div class="col-6 col-md">
-                <i class="fab fa-github-square fa-lg"></i>
-                <a href="https://github.com/mustafagenc/amatortelsizcilik" class="ml-1 underline">
-                    Github
+                <a href="https://github.com/mustafagenc/amatortelsizcilik" class="footer-github">
+                    <i class="fab fa-github-square fa-lg"></i>
                 </a>
             </div>
             <div class="col-6 col-md text-right">

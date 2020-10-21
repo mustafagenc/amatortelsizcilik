@@ -15,7 +15,7 @@
                             <h2 class="d-inline">{!! $page->title !!}</h2><br />
 
                             <small>
-                                <i class="far fa-clock"></i> {{ $page->created_at->diffForHumans() }}
+                                <i class="far fa-clock"></i> {{ $page->created_at->diffForHumans() }} -
                                 <i class="fas fa-stopwatch"></i> {{ read_time(['content' => $page->body ]) }}</small>
                         </div>
 
