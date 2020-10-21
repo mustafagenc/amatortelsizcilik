@@ -10965,3 +10965,54 @@ body {
   background-color: #FFFFFF;
 }
 
+#social-links ul {
+  list-style: none !important;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#social-links ul li {
+  display: inline-block;
+  text-align: center;
+  padding: 0 3px;
+}
+
+#social-links ul li a {
+  font-size: 24px;
+}
+
+#social-links ul li a:hover {
+  opacity: 0.6;
+}
+
+#social-links ul li a.social-facebook {
+  color: #3B5998;
+}
+
+#social-links ul li a.social-twitter {
+  color: #55ACEE;
+}
+
+#social-links ul li a.social-pinterest {
+  color: #C61118;
+}
+
+#social-links ul li a.social-linkedin {
+  color: #0082CA;
+}
+
+#social-links ul li a.social-whatsapp {
+  color: #25D366;
+}
+
+#social-links ul li a.social-telegram {
+  color: #27A5E5;
+}
+
+#social-links ul li a.social-reddit {
+  color: #FF4500;
+}
+

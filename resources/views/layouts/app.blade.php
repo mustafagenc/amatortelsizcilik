@@ -21,7 +21,7 @@
     <main class="main" class="container">
         @yield('content')
     </main>
-    <footer class="container mt-3">
+    <footer class="container my-3">
         <div class="row">
             <div class="col-6 col-md">
                 <i class="fab fa-github-square fa-lg"></i>
@@ -35,5 +35,6 @@
         </div>
     </footer>
     @stack('scripts')
+    <script src="{{ asset('js/share.js') }}"></script>
 </body>
 </html>

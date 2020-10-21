@@ -37266,6 +37266,10 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+var popupSize = {
+  width: 780,
+  height: 550
+};
 $(function () {
   $('[data-toggle="tooltip"]').tooltip();
 });
