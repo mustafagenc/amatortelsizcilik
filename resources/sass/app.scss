@@ -3,23 +3,70 @@
 
 // Variables
 @import 'variables';
+@import 'print';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+@import 'extended';
 
-@media print {
-    body {
-        padding: 0 !important;
-    }
-    footer {
-        display: none !important;
-    }
 
-    .card {
-        border: 0 !important;
-    }
+#social-links {
+    & ul {
+        list-style: none !important;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin:0 !important;
+        padding:0 !important;
 
-    .print-none {
-        display: none !important;
+        & li {
+            display: inline-block;
+            text-align: center;
+            padding: 0 3px;
+
+            & a {
+                font-size: 24px;
+
+                &:hover {
+                    opacity:0.6;
+                }
+
+                &.social-facebook {
+                    color:#3B5998;
+                }
+
+                &.social-twitter {
+                    color:#55ACEE;
+                }
+
+                &.social-pinterest {
+                    color:#C61118;
+                }
+
+                &.social-linkedin {
+                    color:#0082CA;
+                }
+
+                &.social-whatsapp {
+                    color:#25D366;
+                }
+
+                &.social-telegram {
+                    color:#27A5E5;
+                }
+
+                &.social-reddit {
+                    color:#FF4500;
+                }
+            }
+        }
     }
- }
+}
+
+.footer-github {
+    color:#333333;
+}
+
+.footer-youtube {
+    color:#ED302F;
+}

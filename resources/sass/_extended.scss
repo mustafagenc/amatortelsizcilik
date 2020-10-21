@@ -1,0 +1,48 @@
+body {
+    min-height: 50rem;
+    padding-top: 4.5rem;
+  }
+
+  .navbar-brand {
+    background: url('/images/logo.svg') no-repeat scroll 0 0 transparent;
+    background-size: 234px 34px;
+    height: 34px;
+    width: 234px;
+    margin-right: 20px;
+    margin-left: 10px;
+    text-indent: -9999px;
+}
+
+.jumbotron {
+    padding: 1.8rem 1.4rem;
+    background-color: #FFFFFF;
+  }
+
+  .dropdown-menu {
+    margin-top: 8px;
+    border-top: 0;
+    background-color:#F8F9FA;
+    padding: 0;
+
+    .dropdown-item {
+
+        &.active, &:active {
+            color: #fff;
+            text-decoration: none;
+            background-color: $blue;
+
+            &:hover, &:focus {
+                color: #fff;
+                background-color: $blue_fade;
+            }
+        }
+
+        &:hover, &:focus {
+            color: #16181b;
+            background-color: #FFFFFF;
+        }
+
+    }
+
+  }
+

@@ -34,6 +34,10 @@ Route::get('/sitemap', function() {
 	return $sitemap->render('xml');
 });
 
+Route::get('map', function () {
+    return view('map');
+})->name('map');
+
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('questions/{category_id}', [App\Http\Controllers\QuestionController::class, 'index'])->name('questions');
 Route::get('{slug}', [App\Http\Controllers\PageController::class, 'index'])->name('page');

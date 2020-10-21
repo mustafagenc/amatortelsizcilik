@@ -24,7 +24,7 @@
                         <p class="card-text font-weight-bold">
                             {!! $i + 1 . "-" !!}{!! strip_tags($questions[$i]->question) !!}
                             @if ($questions[$i]->info_link != '')
-                                <a href="{{ $questions[$i]->info_link }}" data-toggle="tooltip" data-placement="top" title="Detaylı bilgi için tıklayın..." target="_blank"><i class="fas fa-info-circle text-info mx-2 fa-fw fa-lg"></i></a>
+                                <a href="{{ $questions[$i]->info_link }}" class="print-none" data-toggle="tooltip" data-placement="top" title="Detaylı bilgi için tıklayın..." target="_blank"><i class="fas fa-info-circle text-info mx-2 fa-fw fa-lg"></i></a>
                             @endif
                         </p>
                         <div class="d-flex flex-column">

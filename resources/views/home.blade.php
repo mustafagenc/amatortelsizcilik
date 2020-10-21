@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <div class="jumbotron">
+    <div class="jumbotron shadow-sm">
         <h1 class="display-5">Amatör Radyo (Amatör Telsizcilik)</h1>
         <p class="lead">Amatör radyo, ticari olmayan mesaj alışverişi, kablosuz deneyler, kendi kendini eğitme, özel rekreasyon, radyospor, yarışma ve acil iletişim amacıyla radyo frekansı spektrumunun kullanımıdır. Terim, tamamen kişisel bir amaçla ve maddi menfaatleri olmaksızın radyoelektrik uygulamayla ilgilenen usule uygun yetkili bir kişiyi belirtmek için kullanılır.</p>
         <hr class="my-4">
@@ -11,7 +11,7 @@
 
     <div class="row">
         <div class="col-sm d-flex">
-            <div class="card flex-fill">
+            <div class="card flex-fill shadow-sm">
                 <h5 class="card-header">
                     Başvuru, Sınav Süreç Rehberi
                 </h5>
@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="col-sm d-flex">
-            <div class="card flex-fill">
+            <div class="card flex-fill shadow-sm">
                 <h5 class="card-header">
                     Faydalı Bağlantılar
                 </h5>
