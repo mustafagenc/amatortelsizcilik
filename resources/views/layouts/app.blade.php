@@ -12,30 +12,28 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script src="https://kit.fontawesome.com/95ecd7c087.js" crossorigin="anonymous"></script>
     @yield('analytics', View::make('partials.analytics'))
+    @stack('styles')
 </head>
 <body>
-    <div id="app" class="pb-4">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-            @yield('navbar', View::make('partials.navbar'))
-        </nav>
-        <main class="py-4">
-            @yield('content')
-        </main>
-        <div class="container">
-            <footer>
-                <div class="row">
-                    <div class="col-6 col-md">
-                        <i class="fab fa-github-square fa-lg"></i>
-                        <a href="https://github.com/mustafagenc/amatortelsizcilik" class="ml-1 underline">
-                            Github
-                        </a>
-                    </div>
-                    <div class="col-6 col-md text-right">
-                        Build v0.0.1
-                    </div>
-                </div>
-            </footer>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light shadow-sm">
+        @yield('navbar', View::make('partials.navbar'))
+    </nav>
+    <main class="main" class="container">
+        @yield('content')
+    </main>
+    <footer class="container mt-3">
+        <div class="row">
+            <div class="col-6 col-md">
+                <i class="fab fa-github-square fa-lg"></i>
+                <a href="https://github.com/mustafagenc/amatortelsizcilik" class="ml-1 underline">
+                    Github
+                </a>
+            </div>
+            <div class="col-6 col-md text-right">
+                Build v0.0.1
+            </div>
         </div>
-    </div>
+    </footer>
+    @stack('scripts')
 </body>
 </html>

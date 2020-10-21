@@ -3,23 +3,8 @@
 
 // Variables
 @import 'variables';
+@import 'print';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
-
-@media print {
-    body {
-        padding: 0 !important;
-    }
-    footer {
-        display: none !important;
-    }
-
-    .card {
-        border: 0 !important;
-    }
-
-    .print-none {
-        display: none !important;
-    }
- }
+@import 'extended';
