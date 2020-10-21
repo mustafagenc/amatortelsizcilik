@@ -26,8 +26,8 @@ class QuestionController extends Controller
 
         $this->seo()->setTitle($category->name);
         $this->seo()->opengraph()->setUrl(route('questions', $category->id));
-        $this->seo()->opengraph()->addProperty('type', 'QAPage');
-        $this->seo()->jsonLd()->setType('QAPage');
+        $this->seo()->opengraph()->addProperty('type', 'articles');
+        $this->seo()->jsonLd()->setType('Article');
 
         return view('questions.index', [
                 'category'=> $category,

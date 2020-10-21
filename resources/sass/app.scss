@@ -63,10 +63,46 @@
     }
 }
 
-.footer-github {
-    color:#333333;
-}
+.footer {
 
-.footer-youtube {
-    color:#ED302F;
+    & .github {
+        color:#333333;
+
+        &:hover {
+            color:#444444;
+        }
+    }
+
+    & .youtube {
+        color:#ED302F;
+
+        &:hover {
+            color:#e92323;
+        }
+    }
+
+    & .facebook {
+        color: #097CEB;
+
+        &:hover {
+            color:#0473db;
+        }
+    }
+
+    & .instagram {
+        color: #BC0CBA;
+
+        &:hover {
+            color:#bd08ba;
+        }
+    }
+
+    & .pinterest {
+        color: #E60023;
+
+        &:hover {
+            color:#da0525;
+        }
+    }
+
 }

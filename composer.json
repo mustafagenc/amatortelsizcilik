@@ -10,6 +10,7 @@
     "require": {
         "php": "^7.3",
         "artesaos/seotools": "^0.19.0",
+        "diglactic/laravel-breadcrumbs": "^6.0",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
@@ -19,6 +20,7 @@
         "laravel/ui": "^3.0",
         "laravelium/sitemap": "8.*",
         "mtownsend/read-time": "^1.1",
+        "renatomarinho/laravel-page-speed": "^1.9",
         "sentry/sentry-laravel": "^2.1",
         "tcg/voyager": "^1.4"
     },

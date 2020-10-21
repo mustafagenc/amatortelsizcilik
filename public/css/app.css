@@ -10919,7 +10919,7 @@ a.text-dark:focus {
 
 body {
   min-height: 50rem;
-  padding-top: 4.5rem;
+  padding-top: 4.2rem;
 }
 
 .navbar-brand {
@@ -10930,6 +10930,10 @@ body {
   margin-right: 20px;
   margin-left: 10px;
   text-indent: -9999px;
+}
+
+.breadcrumb {
+  font-size: 12px;
 }
 
 .jumbotron {
@@ -11016,11 +11020,43 @@ body {
   color: #FF4500;
 }
 
-.footer-github {
+.footer .github {
   color: #333333;
 }
 
-.footer-youtube {
+.footer .github:hover {
+  color: #444444;
+}
+
+.footer .youtube {
   color: #ED302F;
+}
+
+.footer .youtube:hover {
+  color: #e92323;
+}
+
+.footer .facebook {
+  color: #097CEB;
+}
+
+.footer .facebook:hover {
+  color: #0473db;
+}
+
+.footer .instagram {
+  color: #BC0CBA;
+}
+
+.footer .instagram:hover {
+  color: #bd08ba;
+}
+
+.footer .pinterest {
+  color: #E60023;
+}
+
+.footer .pinterest:hover {
+  color: #da0525;
 }
 
