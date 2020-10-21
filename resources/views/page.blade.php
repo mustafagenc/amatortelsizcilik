@@ -11,31 +11,28 @@
 
 
                     <div class="row">
-
                         <div class="col-8">
                             <h2 class="d-inline">{!! $page->title !!}</h2><br />
 
-                            <small>
+
+                            <small class="badge badge-dark font-weight-normal">
                                 <i class="far fa-clock"></i> {{ $page->created_at->diffForHumans() }} -
-                                <i class="fas fa-stopwatch"></i> {{ read_time(['content' => $page->body ]) }}</small>
+                                <i class="fas fa-stopwatch"></i> {{ read_time(['content' => $page->body ]) }}
+                            </small>
+
                         </div>
-
                         <div class="col-4 text-right">
-
-                        <div class="dropdown print-none">
-                            <a  type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
-                            <div class="dropdown-menu dropdown-primary">
-                                <a class="dropdown-item" href="javascript:window.print();"><i class="fas fa-fw fa-print"></i>&nbsp;&nbsp;Yazdır</a>
+                            <div class="dropdown print-none">
+                                <a  type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
+                                <div class="dropdown-menu dropdown-primary">
+                                    <a class="dropdown-item" href="javascript:window.print();"><i class="fas fa-fw fa-print"></i>&nbsp;&nbsp;Yazdır</a>
+                                </div>
                             </div>
                         </div>
-
-                        </div>
-
                     </div>
 
+                    <hr class="mt-1 mb-1">
 
-
-                    <hr class="mt-1 mb-2">
                     @if ($page->excerpt != $page->title)
                         <div class="alert alert-info" role="alert">
                         <i class="fas fa-lightbulb"></i> {{ $page->excerpt }}
