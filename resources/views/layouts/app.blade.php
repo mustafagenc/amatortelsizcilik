@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script src="https://kit.fontawesome.com/95ecd7c087.js" crossorigin="anonymous"></script>
-    @yield('analytics', View::make('partials.analytics'))
+    @yield('services', View::make('partials.services'))
     @stack('styles')
 </head>
 <body>
@@ -21,12 +21,13 @@
     <main class="main" class="container">
         @yield('content')
     </main>
-    <footer class="container my-3">
+    <footer class="container my-3 footer">
         <div class="row">
             <div class="col-6 col-md">
-                <a href="https://github.com/mustafagenc/amatortelsizcilik" class="footer-github">
-                    <i class="fab fa-github-square fa-lg"></i>
-                </a>
+                <a href="{{ setting('site.social.github') }}" class="github" title="Github"><i class="fab fa-github fa-lg"></i></a>
+                <a href="{{ setting('site.social.facebook') }}" class="facebook" title="Facebook"><i class="fab fa-facebook fa-lg"></i></a>
+                <a href="{{ setting('site.social.pinterest') }}" class="pinterest" class="Pinterest"><i class="fab fa-pinterest fa-lg"></i></a>
+                <a href="{{ setting('site.social.instagram') }}" class="instagram" class="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
             </div>
             <div class="col-6 col-md text-right">
                 Build v0.0.1
@@ -34,6 +35,5 @@
         </div>
     </footer>
     @stack('scripts')
-    <script src="{{ asset('js/share.js') }}"></script>
 </body>
 </html>

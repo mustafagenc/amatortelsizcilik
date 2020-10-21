@@ -11016,11 +11016,43 @@ body {
   color: #FF4500;
 }
 
-.footer-github {
+.footer .github {
   color: #333333;
 }
 
-.footer-youtube {
+.footer .github:hover {
+  color: #444444;
+}
+
+.footer .youtube {
   color: #ED302F;
+}
+
+.footer .youtube:hover {
+  color: #e92323;
+}
+
+.footer .facebook {
+  color: #097CEB;
+}
+
+.footer .facebook:hover {
+  color: #0473db;
+}
+
+.footer .instagram {
+  color: #BC0CBA;
+}
+
+.footer .instagram:hover {
+  color: #bd08ba;
+}
+
+.footer .pinterest {
+  color: #E60023;
+}
+
+.footer .pinterest:hover {
+  color: #da0525;
 }
 
