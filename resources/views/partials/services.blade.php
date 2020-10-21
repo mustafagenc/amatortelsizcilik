@@ -5,7 +5,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', '{{setting('site.google_analytics_tracking_id')}}');
 </script>
 <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
@@ -13,8 +12,8 @@
   window.OneSignal = window.OneSignal || [];
   OneSignal.push(function() {
     OneSignal.init({
-      appId: "{{ setting('site.onesignal.appid') }}",
-      safari_web_id: "{{ setting('site.onesignal.safari_web_id') }}",
+      appId: "{{ setting('site.onesignal_appid') }}",
+      safari_web_id: "{{ setting('site.onesignal_safari_web_id') }}",
       notifyButton: {
         enable: true,
       },
