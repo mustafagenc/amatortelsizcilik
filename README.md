@@ -1,4 +1,4 @@
-![alt text][cover]
+![Chuck Scott - N8DNX][cover]
 [Chuck Scott](http://www.n8dnx.org/)
 
 
@@ -22,4 +22,4 @@ Sınava hazırlanmak ve öğrendiklerimi paylaşmak için geliştirmeye başlad�
 [4]: https://www.youtube.com/channel/UCwJ_TQTyNo0dk3q2yDyhS3w
 [5]: https://www.youtube.com/channel/UCLqQ5u1b5Q-LFfcUCYiKd4Q
 
-[cover]: https://raw.githubusercontent.com/mustafagenc/amatortelsizcilik/develop/public/images/radio.jpg "Chuck Scott - N8DNX"
+[cover]: https://raw.githubusercontent.com/mustafagenc/amatortelsizcilik/master/public/images/radio.jpg "Chuck Scott - N8DNX"
