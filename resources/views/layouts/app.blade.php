@@ -31,7 +31,7 @@
                 <a href="{{ setting('site.social_instagram') }}" class="instagram" class="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
             </div>
             <div class="col-6 col-md text-right">
-                Build v0.0.1
+                {!! \Tremby\LaravelGitVersion\GitVersionHelper::getVersion() !!}
             </div>
         </div>
     </footer>
