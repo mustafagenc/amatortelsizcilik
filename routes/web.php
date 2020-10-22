@@ -18,7 +18,8 @@ Route::get('/sitemap', function() {
 
 	if (!$sitemap->isCached()) {
 
-		$sitemap->add(URL::to('/'), '2012-08-25T20:10:00+02:00', '1.0', 'daily');
+		$sitemap->add(URL::to(''), '2020-10-21T20:10:00+02:00', '1.0', 'daily');
+        $sitemap->add(route('contact'), '2020-10-21T20:10:00+02:00', '1.0', 'weekly');
 
         $categories = ExamCategory::orderBy('created_at', 'desc')->get();
 		foreach ($categories as $category) {

@@ -12,7 +12,7 @@
 
 @section('content')
 <div class="container">
-    <div class="row mt-3">
+    <div class="row">
         <div class="col-sm d-flex">
             <div class="card flex-fill">
                 <div class="card-body">
@@ -96,5 +96,4 @@
         </div>
     </div>
 </div>
-
 @endsection
