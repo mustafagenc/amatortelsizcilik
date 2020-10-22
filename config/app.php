@@ -177,7 +177,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
-
+        Tremby\LaravelGitVersion\GitVersionServiceProvider::class,
     ],
 
     /*

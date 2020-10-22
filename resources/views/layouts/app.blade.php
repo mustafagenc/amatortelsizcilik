@@ -28,10 +28,11 @@
                 <a href="{{ setting('site.social_github') }}" class="github" title="Github"><i class="fab fa-github fa-lg"></i></a>&nbsp;
                 <a href="{{ setting('site.social_facebook') }}" class="facebook" title="Facebook"><i class="fab fa-facebook fa-lg"></i></a>&nbsp;
                 <a href="{{ setting('site.social_pinterest') }}" class="pinterest" class="Pinterest"><i class="fab fa-pinterest fa-lg"></i></a>&nbsp;
-                <a href="{{ setting('site.social_instagram') }}" class="instagram" class="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="{{ setting('site.social_instagram') }}" class="instagram" class="Instagram"><i class="fab fa-instagram fa-lg"></i></a>&nbsp;
+                <a href="{{ setting('site.social_reddit') }}" class="reddit" class="Reddit"><i class="fab fa-reddit fa-lg"></i></a>
             </div>
             <div class="col-6 col-md text-right">
-                Build v0.0.1
+                {!! \Tremby\LaravelGitVersion\GitVersionHelper::getVersion() !!}
             </div>
         </div>
     </footer>

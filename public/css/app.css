@@ -11060,3 +11060,11 @@ body {
   color: #da0525;
 }
 
+.footer .reddit {
+  color: #FF4500;
+}
+
+.footer .reddit:hover {
+  color: #f04304;
+}
+
