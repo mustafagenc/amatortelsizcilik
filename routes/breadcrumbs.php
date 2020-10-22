@@ -25,3 +25,8 @@ Breadcrumbs::for('page', function ($trail, $slug) {
     $trail->parent('home');
     $trail->push($page->title, route('page', $slug));
 });
+
+Breadcrumbs::for('contact', function ($trail) {
+    $trail->parent('home');
+    $trail->push("İrtibat", route('contact'));
+});

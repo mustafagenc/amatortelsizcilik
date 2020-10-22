@@ -39,14 +39,17 @@ Route::get('map', function () {
 })->name('map');
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('contact', [
+    'uses' => 'App\Http\Controllers\ContactController@index',
+    'as' => 'contact'
+]);
+
+Route::Post('contact/store', [
+    'uses' => 'App\Http\Controllers\ContactController@store',
+    'as' => 'contact.store'
+]);
+
 Route::get('questions/{category_id}', [App\Http\Controllers\QuestionController::class, 'index'])->name('questions');
 Route::get('{slug}', [App\Http\Controllers\PageController::class, 'index'])->name('page');
 
-
-// Route::prefix('exam')->group(function () {
-
-//     Route::get('/', function () {
-//         return view('exam.index');
-//     })->name('exam');
-
-// });
