@@ -162,6 +162,9 @@ return [
         'email'                 => 'E-posta adresi',
         'first_name'            => 'Adı',
         'last_name'             => 'Soyadı',
+        'fullname'              => 'Ad Soyad',
+        'subject'               => 'Konu',
+        'message'               => 'Mesaj',
         'password'              => 'Şifre',
         'password_confirmation' => 'Şifre (Tekrar)',
         'city'                  => 'Şehir',
@@ -186,6 +189,7 @@ return [
         'time'                  => 'Zaman',
         'available'             => 'Mevcut',
         'size'                  => 'Boyut',
+        'g-recaptcha-response'  => 'reCaptcha'
     ],
 
 ];
