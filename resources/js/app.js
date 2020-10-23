@@ -1,8 +1,9 @@
 require('./bootstrap');
-const Swal = require('sweetalert2')
+const Swal = require('sweetalert2');
 
 $(function () {
     $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="popover"]').popover({html: true});
 
     jQuery('a').filter(function() {
         return this.hostname && this.hostname !== location.hostname;
@@ -12,7 +13,7 @@ $(function () {
         var n = domain.includes(this.hostname.replace('www.',''));
 
         if (n) {
-            window.open(this.href + '?ref=amatortelsizcilik.com');
+            window.open(this.href);
         } else {
             Swal.fire({
                 text: "Harici bir web sitesine gitmek üzeresiniz...",

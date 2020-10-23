@@ -53,7 +53,7 @@
             </div>
         </div>
     </div>
-    <div class="row mt-3">
+    <div class="row mt-3 print-none">
         <div class="col-sm d-flex">
             <div class="card flex-fill">
                 <div class="card-body">
