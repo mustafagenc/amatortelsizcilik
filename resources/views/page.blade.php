@@ -1,6 +1,20 @@
 @extends('layouts.app')
-
 @section('breadcrumbs', Breadcrumbs::render())
+
+@push('scripts')
+<script>
+    var disqus_config = function () {
+        this.page.url = '{!! route('page', $page->slug) !!}';
+        this.page.identifier = {!! $page->id !!};
+    };
+    (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://amatortelsizcilik.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+@endpush
 
 @section('content')
 <div class="container">
@@ -8,18 +22,13 @@
         <div class="col-sm d-flex">
             <div class="card flex-fill">
                 <div class="card-body">
-
-
                     <div class="row">
                         <div class="col-8">
                             <h2 class="d-inline">{!! $page->title !!}</h2><br />
-
-
-                            <small class="badge badge-dark font-weight-normal">
+                            <small class="badge badge-dark font-weight-normal print-none">
                                 <i class="far fa-clock"></i> {{ $page->created_at->diffForHumans() }} -
                                 <i class="fas fa-stopwatch"></i> {{ read_time(['content' => $page->body ]) }}
                             </small>
-
                         </div>
                         <div class="col-4 text-right">
                             <div class="dropdown print-none">
@@ -30,23 +39,20 @@
                             </div>
                         </div>
                     </div>
-
-                    <hr class="mt-1 mb-1">
-
+                    <hr class="mt-1 mb-1 print-none">
                     @if ($page->excerpt != $page->title)
-                        <div class="alert alert-info" role="alert">
+                        <div class="alert alert-info print-none" role="alert">
                         <i class="fas fa-lightbulb"></i> {{ $page->excerpt }}
                         </div>
                     @endif
                     {!! $page->body !!}
                 </div>
-                <div class="card-footer">
+                <div class="card-footer print-none">
                    <div class="row">
                        <div class="col">
                         {!! Share::page(route('page', $page->slug), $page->title)->facebook()->twitter()->pinterest()->linkedin()->whatsapp()->telegram()->reddit(); !!}
                         </div>
                         <div class="col text-right">
-
                         </div>
                     </div>
                 </div>
@@ -65,18 +71,3 @@
     </div>
 </div>
 @endsection
-
-@push('scripts')
-<script>
-var disqus_config = function () {
-this.page.url = '{!! route('page', $page->slug) !!}';
-this.page.identifier = {!! $page->id !!};
-};
-(function() {
-var d = document, s = d.createElement('script');
-s.src = 'https://amatortelsizcilik.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-@endpush

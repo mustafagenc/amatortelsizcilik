@@ -9,7 +9,7 @@ $(function () {
         return this.hostname && this.hostname !== location.hostname;
       }).click(function(e) {
 
-        var domain = ["facebook.com", "instagram.com", "reddit.com", "linkedin.com", "twitter.com", "pinterest.com", "telegram.me", "wa.me", "github.com"];
+        var domain = ["facebook.com", "instagram.com", "reddit.com", "linkedin.com", "twitter.com", "pinterest.com", "telegram.me", "wa.me", "github.com", "amatortelsizcilik.com"];
         var n = domain.includes(this.hostname.replace('www.',''));
 
         if (n) {
