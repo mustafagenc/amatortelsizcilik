@@ -1,6 +1,8 @@
 @extends('layouts.app')
-
 @section('breadcrumbs', Breadcrumbs::render())
+
+@push('scripts')
+@endpush
 
 @section('content')
 <div class="container user-select-none">
@@ -21,19 +23,20 @@
                 <div class="card-body">
                     @if ($questions->count() == 0)
                         Sorular eklenmedi
+                    @else
                     @endif
                     @for ($i = 0; $i < $questions->count(); $i++)
                         <p class="card-text font-weight-bold">
-                            {!! $i + 1 . "-" !!}{!! strip_tags($questions[$i]->question) !!}
+                            {!! $i + 1 . "-" !!}{!! Helper::replace_tags($questions[$i]->question) !!}
                             @if ($questions[$i]->info_link != '')
                                 <a href="{{ $questions[$i]->info_link }}" class="print-none" data-toggle="tooltip" data-placement="top" title="Detaylı bilgi için tıklayın..." target="_blank"><i class="fas fa-info-circle text-info mx-2 fa-fw fa-lg"></i></a>
                             @endif
                         </p>
                         <div class="d-flex flex-column">
-                            <div{!! $questions[$i]->answer_1_true ? "" : " class='print-none'" !!}><i class="fas {!! $questions[$i]->answer_1_true ? "fa-check text-success" : "fa-times" !!} mx-2 fa-fw"></i> {!! strip_tags($questions[$i]->answer_1) !!}</div>
-                            <div{!! $questions[$i]->answer_2_true ? "" : " class='print-none'" !!}><i class="fas {!! $questions[$i]->answer_2_true ? "fa-check text-success" : "fa-times" !!} mx-2 fa-fw"></i> {!! strip_tags($questions[$i]->answer_2) !!}</div>
-                            <div{!! $questions[$i]->answer_3_true ? "" : " class='print-none'" !!}><i class="fas {!! $questions[$i]->answer_3_true ? "fa-check text-success" : "fa-times" !!} mx-2 fa-fw"></i> {!! strip_tags($questions[$i]->answer_3) !!}</div>
-                            <div{!! $questions[$i]->answer_4_true ? "" : " class='print-none'" !!}><i class="fas {!! $questions[$i]->answer_4_true ? "fa-check text-success" : "fa-times" !!} mx-2 fa-fw"></i> {!! strip_tags($questions[$i]->answer_4) !!}</div>
+                            <div{!! $questions[$i]->answer_1_true ? "" : " class='print-none'" !!}><i class="fas {!! $questions[$i]->answer_1_true ? "fa-check text-success" : "fa-times" !!} mx-2 fa-fw"></i> {!! Helper::replace_tags($questions[$i]->answer_1) !!}</div>
+                            <div{!! $questions[$i]->answer_2_true ? "" : " class='print-none'" !!}><i class="fas {!! $questions[$i]->answer_2_true ? "fa-check text-success" : "fa-times" !!} mx-2 fa-fw"></i> {!! Helper::replace_tags($questions[$i]->answer_2) !!}</div>
+                            <div{!! $questions[$i]->answer_3_true ? "" : " class='print-none'" !!}><i class="fas {!! $questions[$i]->answer_3_true ? "fa-check text-success" : "fa-times" !!} mx-2 fa-fw"></i> {!! Helper::replace_tags($questions[$i]->answer_3) !!}</div>
+                            <div{!! $questions[$i]->answer_4_true ? "" : " class='print-none'" !!}><i class="fas {!! $questions[$i]->answer_4_true ? "fa-check text-success" : "fa-times" !!} mx-2 fa-fw"></i> {!! Helper::replace_tags($questions[$i]->answer_4) !!}</div>
                         </div>
                         @if ($questions->count() -1 != $i)
                         <hr />

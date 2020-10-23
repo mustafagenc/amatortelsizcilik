@@ -6,7 +6,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     {!! SEO::generate(true) !!}
     @yield('favicon', View::make('partials.favicon'))
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}" async></script>
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -32,7 +32,7 @@
                 <a href="{{ setting('site.social_reddit') }}" class="reddit" class="Reddit"><i class="fab fa-reddit fa-lg"></i></a>
             </div>
             <div class="col-6 col-md text-right">
-                {!! \Tremby\LaravelGitVersion\GitVersionHelper::getVersion() !!}
+               <a href="{{ route('page', 'gizlilik-sartlar-ve-kosullar') }}" class="text-muted">Gizlilik & Şartlar ve Koşullar</a> | {!! \Tremby\LaravelGitVersion\GitVersionHelper::getVersion() !!}
             </div>
         </div>
     </footer>

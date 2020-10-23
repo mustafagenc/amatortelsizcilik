@@ -16,13 +16,13 @@ class QuestionController extends Controller
             return ExamCategory::where('id', '=', $category_id)->firstOrFail();
         });
 
-        $questions = Cache::remember('exam_questions_' . $category_id, 60, function () use($category_id) {
-            return ExamQuestion::where('category_id', '=', $category_id)->inRandomOrder()->get();
-        });
-
         if ($category == null) {
             abort(404);
         }
+
+        $questions = Cache::remember('exam_questions_' . $category_id, 60, function () use($category_id) {
+            return ExamQuestion::where('category_id', '=', $category_id)->inRandomOrder()->get();
+        });
 
         $this->seo()->setTitle($category->name);
         $this->seo()->opengraph()->setUrl(route('questions', $category->id));
