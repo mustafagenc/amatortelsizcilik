@@ -9,6 +9,7 @@ class ExamQuestion extends Model
     protected $table = 'exam_questions';
 
     protected $fillable = [
+        'id',
         'is_active',
         'question',
         'info_link',

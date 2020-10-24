@@ -11,4 +11,5 @@ use Artesaos\SEOTools\Traits\SEOTools as SEOToolsTrait;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests, SEOToolsTrait;
+
 }

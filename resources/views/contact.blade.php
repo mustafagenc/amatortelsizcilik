@@ -21,13 +21,14 @@
                             {{Session::get('success')}}
                         </div>
                     @endif
+
                     <form method="post" action="{{ route('contact.store') }}">
                         @csrf
                         <div class="form-row">
                             <div class="col-md-6 mb-1">
                                 <div class="form-group">
                                     <label for="fullname">{{ __('contact.fullname') }}</label>
-                                    <input type="text" required class="form-control {{ $errors->has('fullname') ? 'is-invalid' : '' }}" name="fullname" id="fullname">
+                                    <input type="text" required class="form-control {{ $errors->has('fullname') ? 'is-invalid' : '' }}" name="fullname" id="fullname" @auth value= "{{ Auth::user()->name }}" readonly @endauth>
                                     @if ($errors->has('fullname'))
                                     <div class="invalid-feedback">
                                         {{ $errors->first('fullname') }}
@@ -40,7 +41,7 @@
                             <div class="col-md-6 mb-1">
                                 <div class="form-group">
                                     <label for="email">{{ __('contact.email') }}</label>
-                                    <input type="email" required class="form-control {{ $errors->has('email') ? 'is-invalid' : '' }}" name="email" id="email">
+                                    <input type="email" required class="form-control {{ $errors->has('email') ? 'is-invalid' : '' }}" name="email" id="email" @auth value= "{{ Auth::user()->email }}" readonly @endauth>
                                     @if ($errors->has('email'))
                                     <div class="invalid-feedback">
                                         {{ $errors->first('email') }}

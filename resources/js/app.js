@@ -31,4 +31,8 @@ $(function () {
         }
         return false;
     });
+
+    $('#searchForm').on('shown.bs.collapse', function () {
+        $("#search").focus();
+    })
 });

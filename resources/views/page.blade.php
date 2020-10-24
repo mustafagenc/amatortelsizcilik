@@ -4,6 +4,7 @@
 @push('scripts')
 <script>
     var disqus_config = function () {
+        this.page.title = '{!! $page->title !!}';
         this.page.url = '{!! route('page', $page->slug) !!}';
         this.page.identifier = {!! $page->id !!};
     };

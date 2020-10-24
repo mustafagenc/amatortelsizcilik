@@ -7,6 +7,7 @@
         <p class="lead">Amatör radyo, ticari olmayan mesaj alışverişi, kablosuz deneyler, kendi kendini eğitme, özel rekreasyon, radyospor, yarışma ve acil iletişim amacıyla radyo frekansı spektrumunun kullanımıdır. Terim, tamamen kişisel bir amaçla ve maddi menfaatleri olmaksızın radyoelektrik uygulamayla ilgilenen usule uygun yetkili bir kişiyi belirtmek için kullanılır.</p>
         <hr class="my-4">
         <p>Amatör telsizcilik sizinle aynı tür ilgi alanları olan Dünyanın bir başka yerindeki milyonlarca amatörden biri ile bağlantı kurmanızı sağlayacak sosyal bir hobidir.</p>
+        <p><a href="https://amatortelsizcilik.com/warden/sorubankasi.rar" class="font-weight-bold">Amatör telsizcilik soru bankası indir</a></p>
     </div>
 
     <div class="row">

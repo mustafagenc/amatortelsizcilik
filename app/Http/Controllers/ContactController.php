@@ -18,7 +18,10 @@ class ContactController extends Controller
         $this->seo()->setDescription(setting('site.description'));
         $this->seo()->opengraph()->setUrl(route('contact'));
         $this->seo()->opengraph()->addProperty('type', 'WebPage');
+        $this->seo()->opengraph()->addImage(config('const.share_image'), config('const.share_image_dimensions'));
+        $this->seo()->opengraph()->addProperty('locale', \App::getLocale());
         $this->seo()->jsonLd()->setType('WebPage');
+        $this->seo()->jsonLd()->addImage(config('const.share_image'));
 
         return view('contact');
     }
