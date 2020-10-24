@@ -7,8 +7,6 @@
     {!! SEO::generate(true) !!}
     @yield('favicon', View::make('partials.favicon'))
     <script src="{{ asset('js/app.js') }}" async></script>
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script src="https://kit.fontawesome.com/95ecd7c087.js" crossorigin="anonymous"></script>
     @yield('services', View::make('partials.services'))
