@@ -21,7 +21,10 @@ class PageController extends Controller
         $this->seo()->setDescription($page->meta_description);
         $this->seo()->opengraph()->setUrl(route('page', $page->slug));
         $this->seo()->opengraph()->addProperty('type', 'articles');
+        $this->seo()->opengraph()->addImage(asset('images/share.png'), ['height' => 630, 'width' => 1200]);
+        $this->seo()->opengraph()->addProperty('locale', 'tr-TR');
         $this->seo()->jsonLd()->setType('Article');
+        $this->seo()->jsonLd()->addImage(asset('images/share.png'));
 
         return view('page', compact('page'));
     }
