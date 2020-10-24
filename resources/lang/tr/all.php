@@ -2,6 +2,7 @@
 
 return [
 
-    'dashboard'   => '',
+    'search'   => 'aranacak kelime',
+    'search_result' => 'Arama Sonuçları'
 
 ];

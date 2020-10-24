@@ -9,6 +9,7 @@
     <script src="{{ asset('js/app.js') }}" async></script>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script src="https://kit.fontawesome.com/95ecd7c087.js" crossorigin="anonymous"></script>
+    <link rel="search" type="application/opensearchdescription+xml" href="{{ url('opensearch.xml') }}" title="{{ setting('site.title') }}" />
     @yield('services', View::make('partials.services'))
     @stack('styles')
 </head>
@@ -35,5 +36,15 @@
         </div>
     </footer>
     @stack('scripts')
+    @if(Session::has('modal_error'))
+        <script>
+        $(function () {
+            Swal.fire({
+                icon: 'error',
+                text: '{{ Session::get('modal_error') }}',
+            })
+            });
+        </script>
+    @endif
 </body>
 </html>

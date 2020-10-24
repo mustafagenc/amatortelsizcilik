@@ -11,6 +11,7 @@
         "php": "^7.3",
         "anhskohbo/no-captcha": "^3.3",
         "artesaos/seotools": "^0.19.0",
+        "creativeorange/gravatar": "~1.0",
         "diglactic/laravel-breadcrumbs": "^6.0",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^2.0",
@@ -23,6 +24,7 @@
         "mtownsend/read-time": "^1.1",
         "renatomarinho/laravel-page-speed": "^1.9",
         "sentry/sentry-laravel": "^2.1",
+        "spatie/array-to-xml": "^2.14",
         "tcg/voyager": "^1.4",
         "tremby/laravel-git-version": "^1.2"
     },

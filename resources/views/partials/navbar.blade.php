@@ -10,25 +10,37 @@
         {{ menu('frontend', 'partials.menu') }}
 
         <ul class="navbar-nav ml-auto">
+            <li class="nav-item d-flex">
+                <div class="collapse" id="searchForm">
+                    <form method="get" action="{{ route('search') }}">
+                        <input id="search" type="search" name="q" class="form-control" value="{{ app('request')->input('q') }}" placeholder="{{ __('all.search') }}" />
+                        <!-- @csrf -->
+                    </form>
+                </div>
+                <a class="nav-link ml-auto" href="#searchForm" data-target="#searchForm" data-toggle="collapse"><i class="fa fa-search"></i></a>
+            </li>
             @guest
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">{{ __('menu.login') }}</a>
+                <li class="nav-item dropdown">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    <i class="far fa-user-circle"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('login') }}">{{ __('auth.login') }}</a>
+                        @if (Route::has('register'))
+                            <a class="dropdown-item" href="{{ route('register') }}">{{ __('auth.register') }}</a>
+                        @endif
+                    </div>
                 </li>
-                @if (Route::has('register'))
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">{{ __('menu.register') }}</a>
-                    </li>
-                @endif
             @else
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        {{ Auth::user()->name }}
+                        <img src="{{Gravatar::get(Auth::user()->email, ['size'=>20])}}" alt="{{ Auth::user()->name }}" class="rounded-circle" />
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
+                            {{ __('auth.logout') }}
                         </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf

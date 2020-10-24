@@ -11,11 +11,11 @@ Route::get('map', function () {
 })->name('map');
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+Route::get('search', ['uses' => 'App\Http\Controllers\HomeController@search', 'as' => 'search']);
+Route::get('opensearch.xml', ['uses' => 'App\Http\Controllers\HomeController@open_search', 'as' => 'open_search']);
 Route::get('questions/{category_id}', [App\Http\Controllers\QuestionController::class, 'index'])->name('questions');
 Route::get('contact', ['uses' => 'App\Http\Controllers\ContactController@index', 'as' => 'contact']);
 Route::Post('contact/store', ['uses' => 'App\Http\Controllers\ContactController@store', 'as' => 'contact.store']);
-
 
 Auth::routes();
 Route::group(['prefix' => 'admin'], function () {
@@ -42,5 +42,6 @@ Route::get('/sitemap', function() {
 	}
 	return $sitemap->render('xml');
 });
+
 Route::get('{slug}', [App\Http\Controllers\PageController::class, 'index'])->name('page');
 

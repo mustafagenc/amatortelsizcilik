@@ -26,6 +26,7 @@
                     @else
                     @endif
                     @for ($i = 0; $i < $questions->count(); $i++)
+                        <a id="question-{{ $questions[$i]->id }}"></a>
                         <p class="card-text font-weight-bold">
                             {!! $i + 1 . "-" !!}{!! $questions[$i]->question !!}
                             @if ($questions[$i]->info_link != '')
