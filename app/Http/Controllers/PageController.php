@@ -9,7 +9,7 @@ class PageController extends Controller
 {
     public function index($slug)
     {
-        $page = Cache::remember('page_' . $slug, 60, function () use ($slug) {
+        $page = Cache::remember('page_' . $slug, config('const.cache_sec_pages'), function () use ($slug) {
             return Page::where('slug', '=', $slug)->firstOrFail();
         });
 
@@ -21,10 +21,10 @@ class PageController extends Controller
         $this->seo()->setDescription($page->meta_description);
         $this->seo()->opengraph()->setUrl(route('page', $page->slug));
         $this->seo()->opengraph()->addProperty('type', 'articles');
-        $this->seo()->opengraph()->addImage(asset('images/share.png'), ['height' => 630, 'width' => 1200]);
-        $this->seo()->opengraph()->addProperty('locale', 'tr-TR');
+        $this->seo()->opengraph()->addImage(config('const.share_image'), config('const.share_image_dimensions'));
+        $this->seo()->opengraph()->addProperty('locale', \App::getLocale());
         $this->seo()->jsonLd()->setType('Article');
-        $this->seo()->jsonLd()->addImage(asset('images/share.png'));
+        $this->seo()->jsonLd()->addImage(config('const.share_image'));
 
         return view('page', compact('page'));
     }
