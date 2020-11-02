@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Cache;
 use TCG\Voyager\Models\Page;
+use App\Helpers\Helper;
 
 class PageController extends Controller
 {

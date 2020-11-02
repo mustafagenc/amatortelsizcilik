@@ -63,6 +63,20 @@ class HomeController extends Controller
         return response($result, 200, ['Content-Type' => 'application/xml']);
     }
 
+    public function mors() {
+
+        $this->seo()->setTitle(__('all.mors'));
+        $this->seo()->setDescription(setting('site.description'));
+        $this->seo()->opengraph()->setUrl(route('search'));
+        $this->seo()->opengraph()->addProperty('type', 'WebPage');
+        $this->seo()->opengraph()->addImage(config('const.share_image'), config('const.share_image_dimensions'));
+        $this->seo()->opengraph()->addProperty('locale', \App::getLocale());
+        $this->seo()->jsonLd()->setType('WebPage');
+        $this->seo()->jsonLd()->addImage(config('const.share_image'));
+
+        return view('mors');
+    }
+
     public function search(SearchRequest $request)
     {
         if (isset($request->validator) && $request->validator->fails()) {
@@ -82,7 +96,7 @@ class HomeController extends Controller
         $query = $request->q;
 
         $pages = Cache::remember('search_result_pages_' . Str::slug($query, ''), config('const.cache_sec_search_result'), function () use ($query) {
-            $pages = Page::where('title', 'LIKE', '%' . $query . '%')->get();
+            $pages = Page::where('title', 'LIKE', '%' . $query . '%')->orWhere('body', 'LIKE', '%' . $query . '%')->get();
             $pages = $pages->map(function ($page) use ($pages) {
                 return [
                     'id' => $page->id,
