@@ -31,7 +31,7 @@
                 <a href="{{ setting('site.social_reddit') }}" class="reddit" class="Reddit"><i class="fab fa-reddit fa-lg"></i></a>
             </div>
             <div class="col-6 col-md text-right">
-               <a href="{{ route('page', 'gizlilik-sartlar-ve-kosullar') }}" class="text-muted">Gizlilik & Şartlar ve Koşullar</a> | {!! \Tremby\LaravelGitVersion\GitVersionHelper::getVersion() !!}
+               <a href="{{ route('page', 'gizlilik-sartlar-ve-kosullar') }}" class="text-muted">Gizlilik & Şartlar ve Koşullar</a> <span class="c-hide-on-md">|</span> {!! \Tremby\LaravelGitVersion\GitVersionHelper::getVersion() !!}
             </div>
         </div>
     </footer>

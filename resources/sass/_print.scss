@@ -29,4 +29,14 @@
     p {
         margin: 0 !important;
     }
+
+    abbr[title] {
+        border-bottom: none !important;
+        cursor: inherit !important;
+        text-decoration: none !important;
+    }
+
+    abbr[title]::after {
+        content: "" !important;
+    }
 }
