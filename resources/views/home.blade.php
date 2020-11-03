@@ -22,7 +22,7 @@
             </div>
             </div>
         </div>
-        <div class="col-sm d-flex">
+        <div class="col-sm d-flex c-mt-2">
             <div class="card flex-fill shadow-sm">
                 <h5 class="card-header">
                     Faydalı Bağlantılar

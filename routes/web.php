@@ -12,6 +12,7 @@ Route::get('map', function () {
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('search', ['uses' => 'App\Http\Controllers\HomeController@search', 'as' => 'search']);
+Route::get('mors', ['uses' => 'App\Http\Controllers\HomeController@mors', 'as' => 'mors']);
 Route::get('opensearch.xml', ['uses' => 'App\Http\Controllers\HomeController@open_search', 'as' => 'open_search']);
 Route::get('questions/{category_id}', [App\Http\Controllers\QuestionController::class, 'index'])->name('questions');
 Route::get('contact', ['uses' => 'App\Http\Controllers\ContactController@index', 'as' => 'contact']);
@@ -29,6 +30,7 @@ Route::get('/sitemap', function() {
 
 		$sitemap->add(URL::to(''), '2020-10-21T20:10:00+02:00', '1.0', 'daily');
         $sitemap->add(route('contact'), '2020-10-21T20:10:00+02:00', '1.0', 'weekly');
+        $sitemap->add(route('mors'), '2020-10-21T20:10:00+02:00', '1.0', 'weekly');
 
         $categories = ExamCategory::orderBy('created_at', 'desc')->get();
 		foreach ($categories as $category) {

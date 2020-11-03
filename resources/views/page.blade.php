@@ -46,7 +46,7 @@
                         <i class="fas fa-lightbulb"></i> {{ $page->excerpt }}
                         </div>
                     @endif
-                    {!! $page->body !!}
+                    {!! \Helper::replace_tags($page->body) !!}
                 </div>
                 <div class="card-footer print-none">
                    <div class="row">

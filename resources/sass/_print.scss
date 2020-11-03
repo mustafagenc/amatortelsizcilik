@@ -1,7 +1,19 @@
 @media print {
+    @page {
+        size: A4;
+        margin: 10px 0;
+    }
+
+    html,
+    body {
+        width: 210mm;
+        height: 297mm;
+    }
+
     body {
         padding: 0 !important;
     }
+
     footer {
         display: none !important;
     }
@@ -13,4 +25,18 @@
     .print-none {
         display: none !important;
     }
- }
+
+    p {
+        margin: 0 !important;
+    }
+
+    abbr[title] {
+        border-bottom: none !important;
+        cursor: inherit !important;
+        text-decoration: none !important;
+    }
+
+    abbr[title]::after {
+        content: "" !important;
+    }
+}

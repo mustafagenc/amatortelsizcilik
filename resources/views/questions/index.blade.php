@@ -34,13 +34,13 @@
                             @endif
                         </p>
                         <div class="d-flex flex-column">
-                            <div{!! $questions[$i]->answer_1_true ? "" : " class='print-none'" !!}><i class="fas {!! $questions[$i]->answer_1_true ? "fa-check text-success" : "fa-times" !!} mx-2 fa-fw"></i> {!! $questions[$i]->answer_1 !!}</div>
-                            <div{!! $questions[$i]->answer_2_true ? "" : " class='print-none'" !!}><i class="fas {!! $questions[$i]->answer_2_true ? "fa-check text-success" : "fa-times" !!} mx-2 fa-fw"></i> {!! $questions[$i]->answer_2 !!}</div>
-                            <div{!! $questions[$i]->answer_3_true ? "" : " class='print-none'" !!}><i class="fas {!! $questions[$i]->answer_3_true ? "fa-check text-success" : "fa-times" !!} mx-2 fa-fw"></i> {!! $questions[$i]->answer_3 !!}</div>
-                            <div{!! $questions[$i]->answer_4_true ? "" : " class='print-none'" !!}><i class="fas {!! $questions[$i]->answer_4_true ? "fa-check text-success" : "fa-times" !!} mx-2 fa-fw"></i> {!! $questions[$i]->answer_4 !!}</div>
+                            <div{!! $questions[$i]->answer_1_true ? "" : " class='print-none'" !!}><i class="fas {!! $questions[$i]->answer_1_true ? "fa-check text-success" : "fa-times" !!} mx-2 fa-fw print-none"></i> {!! $questions[$i]->answer_1 !!}</div>
+                            <div{!! $questions[$i]->answer_2_true ? "" : " class='print-none'" !!}><i class="fas {!! $questions[$i]->answer_2_true ? "fa-check text-success" : "fa-times" !!} mx-2 fa-fw print-none"></i> {!! $questions[$i]->answer_2 !!}</div>
+                            <div{!! $questions[$i]->answer_3_true ? "" : " class='print-none'" !!}><i class="fas {!! $questions[$i]->answer_3_true ? "fa-check text-success" : "fa-times" !!} mx-2 fa-fw print-none"></i> {!! $questions[$i]->answer_3 !!}</div>
+                            <div{!! $questions[$i]->answer_4_true ? "" : " class='print-none'" !!}><i class="fas {!! $questions[$i]->answer_4_true ? "fa-check text-success" : "fa-times" !!} mx-2 fa-fw print-none"></i> {!! $questions[$i]->answer_4 !!}</div>
                         </div>
                         @if ($questions->count() -1 != $i)
-                        <hr />
+                        <hr class="print-none" />
                         @endif
                     @endfor
                 </div>

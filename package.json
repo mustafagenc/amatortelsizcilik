@@ -24,6 +24,7 @@
     },
     "dependencies": {
         "bootstrap-icons": "^1.0.0",
+        "morse-decoder": "^3.0.1",
         "sweetalert2": "^10.8.1"
     }
 }
