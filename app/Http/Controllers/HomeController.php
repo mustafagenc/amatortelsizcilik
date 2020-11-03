@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Str;
 use Spatie\ArrayToXml\ArrayToXml;
 use TCG\Voyager\Models\Page;
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -146,6 +147,12 @@ class HomeController extends Controller
         $page = $page ?: (Paginator::resolveCurrentPage() ?: 1);
         $items = $items instanceof Collection ? $items : Collection::make($items);
         return new LengthAwarePaginator($items->forPage($page, $perPage), $items->count(), $perPage, $page, ['path' => route('search')]);
+    }
+
+    public function show_only_true(Request $request, $status){
+        $request->session()->put('show_only_true', $status);
+        $value = session('show_only_true');
+        return $value;
     }
 
 }
