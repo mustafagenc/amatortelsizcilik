@@ -121,7 +121,7 @@ class HomeController extends Controller
                 return [
                     'id' => $question->category_id,
                     'icon' => '<i class="far fa-question-circle"></i>',
-                    'url' => route('questions', $question->category_id) . '#question-' . $question->id,
+                    'url' => route('questions_detail', $question->category_id) . '#question-' . $question->id,
                     'title' => Helper::replace_tags($question->question),
                     'description' => '',
                 ];
