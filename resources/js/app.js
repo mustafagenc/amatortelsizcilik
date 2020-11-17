@@ -34,7 +34,28 @@ $(function () {
         return false;
     });
 
-    $('#searchForm').on('shown.bs.collapse', function () {
+    jQuery('#searchForm').on('shown.bs.collapse', function () {
         $("#search").focus();
     })
+
+    jQuery('.btn-print').click(function(e){
+        window.print();
+    });
+
+    jQuery('.btn-show-true').click(function(e){
+        jQuery('.btn-show-true, .hide-false-answer').hide();
+        jQuery('.btn-show-false').show();
+        jQuery.get( $(this).data('href'), function( data ) {
+            console.log(data);
+        });
+    });
+
+    jQuery('.btn-show-false').click(function(e){
+        jQuery('.btn-show-true, .hide-false-answer').show();
+        jQuery('.btn-show-false').hide();
+        jQuery.get( $(this).data('href'), function( data ) {
+            console.log(data);
+        });
+    });
+
 });

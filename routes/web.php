@@ -14,9 +14,13 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 Route::get('search', ['uses' => 'App\Http\Controllers\HomeController@search', 'as' => 'search']);
 Route::get('mors', ['uses' => 'App\Http\Controllers\HomeController@mors', 'as' => 'mors']);
 Route::get('opensearch.xml', ['uses' => 'App\Http\Controllers\HomeController@open_search', 'as' => 'open_search']);
-Route::get('questions/{category_id}', [App\Http\Controllers\QuestionController::class, 'index'])->name('questions');
+
+Route::get('questions', [App\Http\Controllers\QuestionController::class, 'index'])->name('questions');
+Route::get('questions/{category_id}', [App\Http\Controllers\QuestionController::class, 'detail'])->name('questions_detail');
+
 Route::get('contact', ['uses' => 'App\Http\Controllers\ContactController@index', 'as' => 'contact']);
 Route::Post('contact/store', ['uses' => 'App\Http\Controllers\ContactController@store', 'as' => 'contact.store']);
+Route::get('show_only_true/{status}', ['uses' => 'App\Http\Controllers\HomeController@show_only_true', 'as' => 'trueanswers']);
 
 Auth::routes();
 Route::group(['prefix' => 'admin'], function () {
@@ -31,6 +35,7 @@ Route::get('/sitemap', function() {
 		$sitemap->add(URL::to(''), '2020-10-21T20:10:00+02:00', '1.0', 'daily');
         $sitemap->add(route('contact'), '2020-10-21T20:10:00+02:00', '1.0', 'weekly');
         $sitemap->add(route('mors'), '2020-10-21T20:10:00+02:00', '1.0', 'weekly');
+		$sitemap->add(route('questions'), '2020-11-03T20:10:00+02:00', '1.0', 'weekly');
 
         $categories = ExamCategory::orderBy('created_at', 'desc')->get();
 		foreach ($categories as $category) {

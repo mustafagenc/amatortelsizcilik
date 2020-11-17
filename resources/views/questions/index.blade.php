@@ -1,51 +1,34 @@
 @extends('layouts.app')
 @section('breadcrumbs', Breadcrumbs::render())
 
+@push('styles')
+@endpush
+
 @push('scripts')
 @endpush
 
 @section('content')
-<div class="container user-select-none">
+<div class="container">
     <div class="row">
-        <div class="col-sm d-flex">
-            <div class="card flex-fill">
-                <div class="card-header">
-                    <h5 class="d-inline">{!! $category->name !!}</h5>
-                    @if ($questions->count() > 0)
-                    <div class="dropdown float-right print-none">
-                        <a  type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
-                        <div class="dropdown-menu dropdown-primary">
-                            <a class="dropdown-item" href="javascript:window.print();"><i class="fas fa-fw fa-print"></i>&nbsp;&nbsp;Yazdır</a>
-                        </div>
-                    </div>
-                    @endif
-                </div>
-                <div class="card-body">
-                    @if ($questions->count() == 0)
-                        Sorular eklenmedi
-                    @else
-                    @endif
-                    @for ($i = 0; $i < $questions->count(); $i++)
-                        <a id="question-{{ $questions[$i]->id }}"></a>
-                        <p class="card-text font-weight-bold">
-                            {!! $i + 1 . "-" !!}{!! $questions[$i]->question !!}
-                            @if ($questions[$i]->info_link != '')
-                                <a href="{{ $questions[$i]->info_link }}" class="print-none" data-toggle="tooltip" data-placement="top" title="Detaylı bilgi için tıklayın..." target="_blank"><i class="fas fa-info-circle text-info mx-2 fa-fw fa-lg"></i></a>
-                            @endif
-                        </p>
-                        <div class="d-flex flex-column">
-                            <div{!! $questions[$i]->answer_1_true ? "" : " class='print-none'" !!}><i class="fas {!! $questions[$i]->answer_1_true ? "fa-check text-success" : "fa-times" !!} mx-2 fa-fw print-none"></i> {!! $questions[$i]->answer_1 !!}</div>
-                            <div{!! $questions[$i]->answer_2_true ? "" : " class='print-none'" !!}><i class="fas {!! $questions[$i]->answer_2_true ? "fa-check text-success" : "fa-times" !!} mx-2 fa-fw print-none"></i> {!! $questions[$i]->answer_2 !!}</div>
-                            <div{!! $questions[$i]->answer_3_true ? "" : " class='print-none'" !!}><i class="fas {!! $questions[$i]->answer_3_true ? "fa-check text-success" : "fa-times" !!} mx-2 fa-fw print-none"></i> {!! $questions[$i]->answer_3 !!}</div>
-                            <div{!! $questions[$i]->answer_4_true ? "" : " class='print-none'" !!}><i class="fas {!! $questions[$i]->answer_4_true ? "fa-check text-success" : "fa-times" !!} mx-2 fa-fw print-none"></i> {!! $questions[$i]->answer_4 !!}</div>
-                        </div>
-                        @if ($questions->count() -1 != $i)
-                        <hr class="print-none" />
-                        @endif
-                    @endfor
+
+        @foreach($categories as $category)
+            <div class="col-sm">
+            <div class="card">
+                <h5 class="card-header">
+                {{ $category['name'] }}
+                </h5>
+                <ul class="list-group list-group-flush">
+                    @foreach($category['questions'] as $question)
+                        <li class="list-group-item"><x-icon type="bi-chevron-right" fill="black" /> {!! $question['question'] !!}</li>
+                    @endforeach
+                </ul>
+                <div class="card-footer">
+                    <a class="card-link"  href="{{ route('questions_detail', $category['id']) }}">{{ __('all.all_questions') }}</a>
                 </div>
             </div>
-        </div>
+            </div>
+        @endforeach
+
     </div>
 </div>
 @endsection
