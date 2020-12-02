@@ -17,8 +17,8 @@
                     Başvuru, Sınav Süreç Rehberi
                 </h5>
             <div class="card-body">
-                <p class="card-text">KEGM Duyuru sayfasından ya da E-Devlet Amatör Telsizcilik Sınav Başvuru Sayfasından ya da KEGM E-Hizmetler Amatör Telsizcilik Sınav Başvuru sayfasından bir sonraki sınav döneminin duyurulup duyurulmadığını takip edin.</p>
-                <a href="https://ugurarici.com/2019/06/01/amator-telsizcilik-basvuru-sinav-surec-rehberi/">Yazının devamını için tıklayın</a>
+                <p class="card-text">2020 yılında KEGM ve MEB işbirliği ile amatör telsizcilik belge sınavlarında e-Sınav dönemine geçilmesinin ardından süreç hakkında internet üzerinde pek çok bilgi dolaşıyor.</p>
+                <a href="https://erkanercan.medium.com/2020-amator-telsizcilik-sinavi-ve-belge-islemleri-4fafcfce9433">Yazının devamını için tıklayın</a>
             </div>
             </div>
         </div>
@@ -28,7 +28,7 @@
                     Faydalı Bağlantılar
                 </h5>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><x-icon type="bi-chevron-right" fill="black" /> <a class="card-link" href="https://www.kiyiemniyeti.gov.tr/duyurular">Kıyı Emniyeti Genel Müdürlüğü Duyuru Listesi</a></li>
+                    <li class="list-group-item"><x-icon type="bi-chevron-right" fill="black" /> <a class="card-link" href="https://www.youtube.com/channel/UCwJ_TQTyNo0dk3q2yDyhS3w">Gürel Özbakış</a></li>
                     <li class="list-group-item"><x-icon type="bi-chevron-right" fill="black" /> <a class="card-link" href="http://www.tacallbook.org/">TA Callback</a></li>
                     <li class="list-group-item"><x-icon type="bi-chevron-right" fill="black" /> <a class="card-link" href="https://www.ta7om.com/">TA7OM - Amateur Radio</a></li>
                     <li class="list-group-item"><x-icon type="bi-chevron-right" fill="black" /> <a class="card-link" href="http://www.ta1lsx.com/">TA1LSX Blog</a></li>
