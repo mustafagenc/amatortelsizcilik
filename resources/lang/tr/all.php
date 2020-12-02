@@ -12,6 +12,8 @@ return [
     'show_true_answers' => 'Sadece Doğru Yanıtları Göster',
     'show_all_answers' => 'Tüm Yanıtları Göster',
 
-    'all_questions' => 'Sorular\'a gitmek İçin tıklayın'
+    'all_questions' => 'Sorular\'a gitmek İçin tıklayın',
+
+    'read_more' => 'Devamını oku'
 
 ];
