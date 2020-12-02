@@ -78,6 +78,20 @@ class HomeController extends Controller
         return view('mors');
     }
 
+    public function tamap() {
+
+        $this->seo()->setTitle(__('all.tamap'));
+        $this->seo()->setDescription(setting('site.description'));
+        $this->seo()->opengraph()->setUrl(route('search'));
+        $this->seo()->opengraph()->addProperty('type', 'WebPage');
+        $this->seo()->opengraph()->addImage(config('const.share_image'), config('const.share_image_dimensions'));
+        $this->seo()->opengraph()->addProperty('locale', \App::getLocale());
+        $this->seo()->jsonLd()->setType('WebPage');
+        $this->seo()->jsonLd()->addImage(config('const.share_image'));
+
+        return view('tamap');
+    }
+
     public function search(SearchRequest $request)
     {
         if (isset($request->validator) && $request->validator->fails()) {

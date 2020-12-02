@@ -16,8 +16,8 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        margin:0 !important;
-        padding:0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
 
         & li {
             display: inline-block;
@@ -28,35 +28,35 @@
                 font-size: 24px;
 
                 &:hover {
-                    opacity:0.6;
+                    opacity: 0.6;
                 }
 
                 &.social-facebook {
-                    color:#3B5998;
+                    color: #3B5998;
                 }
 
                 &.social-twitter {
-                    color:#55ACEE;
+                    color: #55ACEE;
                 }
 
                 &.social-pinterest {
-                    color:#C61118;
+                    color: #C61118;
                 }
 
                 &.social-linkedin {
-                    color:#0082CA;
+                    color: #0082CA;
                 }
 
                 &.social-whatsapp {
-                    color:#25D366;
+                    color: #25D366;
                 }
 
                 &.social-telegram {
-                    color:#27A5E5;
+                    color: #27A5E5;
                 }
 
                 &.social-reddit {
-                    color:#FF4500;
+                    color: #FF4500;
                 }
             }
         }
@@ -66,18 +66,18 @@
 .footer {
 
     & .github {
-        color:#333333;
+        color: #333333;
 
         &:hover {
-            color:#444444;
+            color: #444444;
         }
     }
 
     & .youtube {
-        color:#ED302F;
+        color: #ED302F;
 
         &:hover {
-            color:#e92323;
+            color: #e92323;
         }
     }
 
@@ -85,7 +85,7 @@
         color: #097CEB;
 
         &:hover {
-            color:#0473db;
+            color: #0473db;
         }
     }
 
@@ -93,7 +93,7 @@
         color: #BC0CBA;
 
         &:hover {
-            color:#bd08ba;
+            color: #bd08ba;
         }
     }
 
@@ -101,7 +101,7 @@
         color: #E60023;
 
         &:hover {
-            color:#da0525;
+            color: #da0525;
         }
     }
 
@@ -109,8 +109,133 @@
         color: #FF4500;
 
         &:hover {
-            color:#f04304;
+            color: #f04304;
         }
     }
 
+}
+
+
+.svg-turkiye-haritasi {
+    margin: 0 auto;
+    text-align: center;
+    & svg {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.il-isimleri {
+    position: absolute;
+    z-index: 2;
+
+    & div {
+        font-family: 'Open Sans';
+        display: inline-block;
+        background: #5C9AD3;
+        color: #fff;
+        padding: 8px 16px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+    }
+}
+
+
+#svg-turkiye-haritasi path {
+    cursor: pointer;
+    fill: #EEEEEE;
+
+    &:hover {
+        fill: #1094F6;
+    }
+}
+
+#guney-kibris {
+    pointer-events: none;
+}
+
+.TA1,
+.TA1 path {
+    fill: green !important;
+    background-color: green !important;
+}
+
+.TA2,
+.TA2 path {
+    fill: orange !important;
+    background-color: orange !important;
+}
+
+.TA3,
+.TA3 path {
+    fill: khaki !important;
+    background-color: khaki !important;
+}
+
+.TA4,
+.TA4 path {
+    fill: purple !important;
+    background-color: purple !important;
+}
+
+.TA5,
+.TA5 path {
+    fill: darkolivegreen !important;
+    background-color: darkolivegreen !important;
+}
+
+.TA6,
+.TA6 path {
+    fill: blue !important;
+    background-color: blue !important;
+}
+
+.TA7,
+.TA7 path {
+    fill: darksalmon !important;
+    background-color: darksalmon !important;
+}
+
+.TA8,
+.TA8 path {
+    fill: mediumseagreen !important;
+    background-color: mediumseagreen !important;
+}
+
+.TA9,
+.TA9 path {
+    fill: crimson !important;
+    background-color: crimson !important;
+}
+
+
+.B1,
+.B1 path {
+    fill: bisque !important;
+    background-color: bisque !important;
+}
+
+ul.tabolge {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+
+    & li {
+        flex: 1;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+
+        & span {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-right: 5px;
+        }
+    }
 }
