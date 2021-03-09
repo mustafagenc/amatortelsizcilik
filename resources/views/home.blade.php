@@ -29,7 +29,7 @@
                 </h5>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"><x-icon type="bi-chevron-right" fill="black" /> <a class="card-link" href="https://www.youtube.com/channel/UCwJ_TQTyNo0dk3q2yDyhS3w">Gürel Özbakış</a></li>
-                    <li class="list-group-item"><x-icon type="bi-chevron-right" fill="black" /> <a class="card-link" href="http://www.tacallbook.org/">TA Callback</a></li>
+                    <li class="list-group-item"><x-icon type="bi-chevron-right" fill="black" /> <a class="card-link" href="http://www.tacallbook.org/">TA Callbook</a></li>
                     <li class="list-group-item"><x-icon type="bi-chevron-right" fill="black" /> <a class="card-link" href="https://www.ta7om.com/">TA7OM - Amateur Radio</a></li>
                     <li class="list-group-item"><x-icon type="bi-chevron-right" fill="black" /> <a class="card-link" href="http://www.ta1lsx.com/">TA1LSX Blog</a></li>
                 </ul>
